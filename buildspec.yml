@@ -10,7 +10,7 @@ phases:
   pre_build:
     commands:
       - echo Install souece NPM dependencies ...
-      - npm Install
+      - npm install
   build:
     commands:
       - echo Deployment started on `date` ...
