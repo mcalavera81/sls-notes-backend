@@ -4,8 +4,16 @@ service: sls-notes-backend
 
 plugins:
   - serverless-offline
+  - serverless-domain-manager
 
 custom:
+  customDomain:
+    domainName: api.faridhgutierrez.ga
+    basePath: "v1"
+    stage: ${self:provider.stage}
+    certificateName: faridhgutierrez.ga
+    createRoute53Record: true
+
   allowedHeaders:
     - Accept
     - Content-Type
